@@ -1,10 +1,12 @@
+# Esto es un comentario
+INS = install -r
 install:
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+		pip $(INS) requirements.txt
 
 install-azure:
 	pip install --upgrade pip &&\
-		pip install -r requirements-azure.txt 
+		pip $(INS) requirements-azure.txt 
 
 format:
 	black *.py
